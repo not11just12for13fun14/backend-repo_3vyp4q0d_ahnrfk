@@ -3,7 +3,7 @@ Database Schemas for TPO Portal
 
 Each Pydantic model maps to a MongoDB collection (lowercased class name).
 """
-from pydantic import BaseModel, Field, HttpUrl
+from pydantic import BaseModel, Field, HttpUrl, EmailStr
 from typing import List, Optional
 
 class Studentplaced(BaseModel):
@@ -29,3 +29,8 @@ class Teammember(BaseModel):
     phone: Optional[str] = Field(None, description="Contact number")
     linkedin: Optional[HttpUrl] = Field(None, description="LinkedIn profile URL")
     avatar_url: Optional[HttpUrl] = Field(None, description="Profile image URL")
+
+class Contactmessage(BaseModel):
+    name: str = Field(..., min_length=2, description="Sender name")
+    email: EmailStr = Field(..., description="Sender email")
+    message: str = Field(..., min_length=5, max_length=5000, description="Message body")

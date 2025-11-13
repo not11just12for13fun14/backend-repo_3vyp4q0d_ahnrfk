@@ -6,7 +6,7 @@ from typing import List, Optional
 from bson import ObjectId
 
 from database import db, create_document, get_documents
-from schemas import Studentplaced, Company, Teammember
+from schemas import Studentplaced, Company, Teammember, Contactmessage
 
 app = FastAPI(title="TPO Portal API")
 
@@ -114,6 +114,15 @@ async def list_team(limit: int = 50):
             d["id"] = str(d.get("_id"))
             d.pop("_id", None)
         return {"items": docs}
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
+
+# Contact message endpoint (stored to DB)
+@app.post("/api/contact", response_model=Obj)
+async def contact_message(payload: Contactmessage):
+    try:
+        new_id = create_document("contactmessage", payload)
+        return {"id": new_id}
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 

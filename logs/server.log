@@ -1,19 +1,13 @@
 INFO:     Will watch for changes in these directories: ['/home/workspace']
 INFO:     Uvicorn running on http://0.0.0.0:8000 (Press CTRL+C to quit)
-INFO:     Started reloader process [200] using StatReload
-INFO:     Started server process [202]
+INFO:     Started reloader process [285] using StatReload
+INFO:     Started server process [287]
 INFO:     Waiting for application startup.
 INFO:     Application startup complete.
-INFO:     172.20.0.1:33866 - "HEAD / HTTP/1.1" 405 Method Not Allowed
-INFO:     172.20.0.1:33880 - "GET /api/companies HTTP/1.1" 200 OK
-INFO:     172.20.0.1:33894 - "GET /api/students-placed HTTP/1.1" 200 OK
-INFO:     172.20.0.1:33904 - "GET /api/team HTTP/1.1" 200 OK
-INFO:     172.20.0.1:33920 - "GET /api/companies HTTP/1.1" 200 OK
-INFO:     172.20.0.1:33880 - "GET /api/students-placed HTTP/1.1" 200 OK
-INFO:     172.20.0.1:33894 - "GET /api/team HTTP/1.1" 200 OK
-INFO:     172.20.0.1:39616 - "GET /api/students-placed HTTP/1.1" 200 OK
-INFO:     172.20.0.1:39616 - "GET /api/companies HTTP/1.1" 200 OK
-INFO:     172.20.0.1:39618 - "GET /api/team HTTP/1.1" 200 OK
-INFO:     172.20.0.1:39624 - "GET /api/students-placed HTTP/1.1" 200 OK
-INFO:     172.20.0.1:39616 - "GET /api/companies HTTP/1.1" 200 OK
-INFO:     172.20.0.1:39618 - "GET /api/team HTTP/1.1" 200 OK
+INFO:     172.20.0.1:45236 - "HEAD / HTTP/1.1" 405 Method Not Allowed
+INFO:     172.20.0.1:53964 - "GET /api/students-placed HTTP/1.1" 200 OK
+INFO:     172.20.0.1:53968 - "GET /api/team HTTP/1.1" 200 OK
+INFO:     172.20.0.1:53978 - "GET /api/companies HTTP/1.1" 200 OK
+INFO:     172.20.0.1:53964 - "GET /api/students-placed HTTP/1.1" 200 OK
+INFO:     172.20.0.1:53978 - "GET /api/companies HTTP/1.1" 200 OK
+INFO:     172.20.0.1:53968 - "GET /api/team HTTP/1.1" 200 OK
